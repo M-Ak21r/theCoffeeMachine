@@ -48,37 +48,12 @@ while running:
         exit()
 
     #TODO 4: Check resources sufficient?
-    if prompt == "espresso":
-        if MENU["espresso"]["ingredients"]["water"] > resources["water"]:
-            print("Sorry, there is not enough water.")
-            exit()
-        elif MENU["espresso"]["ingredients"]["coffee"] > resources["coffee"]:
-            print("Sorry, there is not enough coffee.")
-            exit()
-
-    if prompt == "latte":
-        if MENU["latte"]["ingredients"]["water"] > resources["water"]:
-            print("Sorry, there is not enough water.")
-            exit()
-        elif MENU["latte"]["ingredients"]["milk"] > resources["milk"]:
-            print("Sorry, there is not enough milk.")
-            exit()
-        elif MENU["latte"]["ingredients"]["coffee"] > resources["coffee"]:
-            print("Sorry, there is not enough coffee.")
-            exit()
-
-    if prompt == "cappuccino":
-        if MENU["cappuccino"]["ingredients"]["water"] > resources["water"]:
-            print("Sorry, there is not enough water.")
-            exit()
-        elif MENU["cappuccino"]["ingredients"]["milk"] > resources["milk"]:
-            print("Sorry, there is not enough milk.")
-            exit()
-        elif MENU["cappuccino"]["ingredients"]["coffee"] > resources["coffee"]:
-            print("Sorry, there is not enough coffee.")
-            exit()
+    for item in MENU:
+        if MENU[item] >= resources[item]:
+            print(f"Sorry, there is not enough {item}")
 
     #TODO 5: Process coins.
+    print("Please insert coins.")
     penny = int(input("How many pennies?: "))
     nickel = int(input("How many nickels?: "))
     dime = int(input("How many dimes?: "))
@@ -102,8 +77,6 @@ while running:
     #TODO 7: Make Coffee.
     if prompt == ("espresso" or "latte" or "cappuccino"):
         resources["water"] -= MENU[prompt]["ingredients"]["water"]
-
-    if prompt == ("espresso" or "latte" or "cappuccino"):
         resources["coffee"] -= MENU[prompt]["ingredients"]["coffee"]
 
     if prompt == ("latte" or "cappuccino"):
