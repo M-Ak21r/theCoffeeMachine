@@ -1,3 +1,14 @@
+#NOT GOOD. LOOKS LIKE A 5 YEARS OLD'S CODE. NEED TO MODIFY.
+#NOT GOOD. LOOKS LIKE A 5 YEARS OLD'S CODE. NEED TO MODIFY.
+#NOT GOOD. LOOKS LIKE A 5 YEARS OLD'S CODE. NEED TO MODIFY.
+#NOT GOOD. LOOKS LIKE A 5 YEARS OLD'S CODE. NEED TO MODIFY.
+#NOT GOOD. LOOKS LIKE A 5 YEARS OLD'S CODE. NEED TO MODIFY.
+#NOT GOOD. LOOKS LIKE A 5 YEARS OLD'S CODE. NEED TO MODIFY.
+#NOT GOOD. LOOKS LIKE A 5 YEARS OLD'S CODE. NEED TO MODIFY.
+#NOT GOOD. LOOKS LIKE A 5 YEARS OLD'S CODE. NEED TO MODIFY.
+#NOT GOOD. LOOKS LIKE A 5 YEARS OLD'S CODE. NEED TO MODIFY.
+#NOT GOOD. LOOKS LIKE A 5 YEARS OLD'S CODE. NEED TO MODIFY.
+
 MENU = {
     "espresso":{
         "ingredients":{
@@ -31,14 +42,13 @@ resources = {
     "money": 0
 }
 
-running = True
-while running:
+
+while True:
     #TODO 1: Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
     prompt = input("What would you like? (espresso/latte/cappuccino): ").lower()
 
     #TODO 2: Turn off the Coffee Machine by entering “off” to the prompt
     if prompt == "off":
-        running = False
         exit()
 
     #TODO 3: Print report
